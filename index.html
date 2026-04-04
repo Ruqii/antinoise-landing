@@ -155,18 +155,19 @@
     /* Manta ray */
     .manta-hero {
       position: absolute;
-      right: -60px;
+      right: -40px;
       top: 50%;
-      transform: translateY(-48%);
-      width: min(580px, 52vw);
-      opacity: 0.5;
+      transform: translateY(-50%);
+      width: min(476px, 44vw);
+      opacity: 0.52;
       pointer-events: none;
       animation: manta-float 9s ease-in-out infinite;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
     }
     @keyframes manta-float {
-      0%,100% { transform: translateY(-48%) rotate(-1.5deg); }
-      35%     { transform: translateY(-53%) rotate(0.5deg);  }
-      68%     { transform: translateY(-44%) rotate(-0.8deg); }
+      0%,100% { transform: translateY(-50%); }
+      50%     { transform: translateY(-57%); }
     }
 
     /* ══════════════════════════════
@@ -476,48 +477,135 @@
         </div>
       </div>
 
-      <!-- ── Manta Ray SVG ── -->
+      <!-- ── Pixel Art Manta Ray ── -->
       <div class="manta-hero" aria-hidden="true">
-        <svg viewBox="0 0 580 340" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Subtle body fill -->
-          <path d="M290 102 C258 88 188 92 118 116 C68 134 24 156 20 170 C16 184 56 182 102 174 C155 165 212 173 290 194 C368 173 425 165 478 174 C524 182 564 184 560 170 C556 156 512 134 462 116 C392 92 322 88 290 102 Z" fill="#bbd8ee" opacity="0.22"/>
-
-          <!-- Wing outline — upper left arc -->
-          <path d="M287 100 C255 87 185 91 114 115 C64 133 22 155 18 170" stroke="#5b97c9" stroke-width="1.9" stroke-linecap="round" fill="none" opacity="0.72"/>
-          <!-- Wing outline — lower left arc back to body -->
-          <path d="M18 170 C22 185 62 183 104 175 C157 166 213 174 287 195" stroke="#5b97c9" stroke-width="1.9" stroke-linecap="round" fill="none" opacity="0.72"/>
-          <!-- Wing outline — upper right arc -->
-          <path d="M293 100 C325 87 395 91 466 115 C516 133 558 155 562 170" stroke="#5b97c9" stroke-width="1.9" stroke-linecap="round" fill="none" opacity="0.72"/>
-          <!-- Wing outline — lower right arc back to body -->
-          <path d="M562 170 C558 185 518 183 476 175 C423 166 367 174 293 195" stroke="#5b97c9" stroke-width="1.9" stroke-linecap="round" fill="none" opacity="0.72"/>
-
-          <!-- Cephalic fins (head horns) -->
-          <path d="M268 103 C256 91 244 79 237 70" stroke="#5b97c9" stroke-width="1.6" stroke-linecap="round" opacity="0.68"/>
-          <path d="M312 103 C324 91 336 79 343 70" stroke="#5b97c9" stroke-width="1.6" stroke-linecap="round" opacity="0.68"/>
-
-          <!-- Head closure (subtle line connecting cephalic fins) -->
-          <path d="M237 70 C254 66 268 65 290 64 C312 65 326 66 343 70" stroke="#5b97c9" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
-
-          <!-- Tail -->
-          <path d="M290 195 C294 213 302 230 312 252 C316 263 316 272 313 278" stroke="#5b97c9" stroke-width="1.6" stroke-linecap="round" opacity="0.65"/>
-
-          <!-- Body center ridge (dashed) -->
-          <path d="M290 104 L290 195" stroke="#5b97c9" stroke-width="0.8" stroke-dasharray="3 7" opacity="0.28"/>
-
-          <!-- Body texture arcs -->
-          <path d="M248 146 C266 140 290 142 314 146" stroke="#5b97c9" stroke-width="1" opacity="0.38"/>
-          <path d="M232 160 C256 153 290 155 324 160" stroke="#5b97c9" stroke-width="1" opacity="0.32"/>
-          <path d="M240 173 C262 167 290 169 318 173" stroke="#5b97c9" stroke-width="1" opacity="0.26"/>
-
-          <!-- Eyes -->
-          <circle cx="256" cy="124" r="4" fill="#5b97c9" opacity="0.55"/>
-          <circle cx="256" cy="124" r="1.8" fill="#5b97c9" opacity="0.9"/>
-          <circle cx="324" cy="124" r="4" fill="#5b97c9" opacity="0.55"/>
-          <circle cx="324" cy="124" r="1.8" fill="#5b97c9" opacity="0.9"/>
-
-          <!-- Wing-tip sketch ticks -->
-          <path d="M18 166 C16 162 15 158 16 154" stroke="#5b97c9" stroke-width="1.1" stroke-linecap="round" opacity="0.38"/>
-          <path d="M562 166 C564 162 565 158 564 154" stroke="#5b97c9" stroke-width="1.1" stroke-linecap="round" opacity="0.38"/>
+        <svg viewBox="0 0 238 196" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+          <!-- Row 0: horn tips -->
+          <rect x="70" y="0" width="14" height="14" fill="#3a6898"/>
+          <rect x="84" y="0" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="112" y="0" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="126" y="0" width="14" height="14" fill="#3a6898"/>
+          <!-- Row 1: horns -->
+          <rect x="56" y="14" width="14" height="14" fill="#3a6898"/>
+          <rect x="70" y="14" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="84" y="14" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="112" y="14" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="126" y="14" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="140" y="14" width="14" height="14" fill="#3a6898"/>
+          <!-- Row 2: body top -->
+          <rect x="42" y="28" width="14" height="14" fill="#3a6898"/>
+          <rect x="56" y="28" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="70" y="28" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="84" y="28" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="98" y="28" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="112" y="28" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="126" y="28" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="140" y="28" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="154" y="28" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="168" y="28" width="14" height="14" fill="#3a6898"/>
+          <!-- Row 3: eyes -->
+          <rect x="14" y="42" width="14" height="14" fill="#3a6898"/>
+          <rect x="28" y="42" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="42" y="42" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="56" y="42" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="70" y="42" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="84" y="42" width="14" height="14" fill="#1a3050"/>
+          <rect x="98" y="42" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="112" y="42" width="14" height="14" fill="#1a3050"/>
+          <rect x="126" y="42" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="140" y="42" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="154" y="42" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="168" y="42" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="182" y="42" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="196" y="42" width="14" height="14" fill="#b8e2f4"/>
+          <rect x="210" y="42" width="14" height="14" fill="#3a6898"/>
+          <!-- Row 4: widest -->
+          <rect x="0" y="56" width="14" height="14" fill="#3a6898"/>
+          <rect x="14" y="56" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="28" y="56" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="42" y="56" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="56" y="56" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="70" y="56" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="84" y="56" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="98" y="56" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="112" y="56" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="126" y="56" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="140" y="56" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="154" y="56" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="168" y="56" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="182" y="56" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="196" y="56" width="14" height="14" fill="#b8e2f4"/>
+          <rect x="210" y="56" width="14" height="14" fill="#b8e2f4"/>
+          <rect x="224" y="56" width="14" height="14" fill="#3a6898"/>
+          <!-- Row 5 -->
+          <rect x="0" y="70" width="14" height="14" fill="#3a6898"/>
+          <rect x="14" y="70" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="28" y="70" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="42" y="70" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="56" y="70" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="70" y="70" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="84" y="70" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="98" y="70" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="112" y="70" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="126" y="70" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="140" y="70" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="154" y="70" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="168" y="70" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="182" y="70" width="14" height="14" fill="#b8e2f4"/>
+          <rect x="196" y="70" width="14" height="14" fill="#b8e2f4"/>
+          <rect x="210" y="70" width="14" height="14" fill="#b8e2f4"/>
+          <rect x="224" y="70" width="14" height="14" fill="#3a6898"/>
+          <!-- Row 6 -->
+          <rect x="14" y="84" width="14" height="14" fill="#3a6898"/>
+          <rect x="28" y="84" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="42" y="84" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="56" y="84" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="70" y="84" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="84" y="84" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="98" y="84" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="112" y="84" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="126" y="84" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="140" y="84" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="154" y="84" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="168" y="84" width="14" height="14" fill="#b8e2f4"/>
+          <rect x="182" y="84" width="14" height="14" fill="#b8e2f4"/>
+          <rect x="196" y="84" width="14" height="14" fill="#b8e2f4"/>
+          <rect x="210" y="84" width="14" height="14" fill="#3a6898"/>
+          <!-- Row 7 -->
+          <rect x="28" y="98" width="14" height="14" fill="#3a6898"/>
+          <rect x="42" y="98" width="14" height="14" fill="#3a6898"/>
+          <rect x="56" y="98" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="70" y="98" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="84" y="98" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="98" y="98" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="112" y="98" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="126" y="98" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="140" y="98" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="154" y="98" width="14" height="14" fill="#b8e2f4"/>
+          <rect x="168" y="98" width="14" height="14" fill="#3a6898"/>
+          <!-- Row 8 -->
+          <rect x="56" y="112" width="14" height="14" fill="#3a6898"/>
+          <rect x="70" y="112" width="14" height="14" fill="#3a6898"/>
+          <rect x="84" y="112" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="98" y="112" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="112" y="112" width="14" height="14" fill="#8ecfe8"/>
+          <rect x="126" y="112" width="14" height="14" fill="#3a6898"/>
+          <rect x="140" y="112" width="14" height="14" fill="#3a6898"/>
+          <!-- Tail rows 9–13 -->
+          <rect x="84" y="126" width="14" height="14" fill="#3a6898"/>
+          <rect x="98" y="126" width="14" height="14" fill="#6ab8d8"/>
+          <rect x="112" y="126" width="14" height="14" fill="#3a6898"/>
+          <rect x="98" y="140" width="14" height="14" fill="#3a6898"/>
+          <rect x="112" y="140" width="14" height="14" fill="#6ab8d8"/>
+          <rect x="126" y="140" width="14" height="14" fill="#3a6898"/>
+          <rect x="112" y="154" width="14" height="14" fill="#3a6898"/>
+          <rect x="126" y="154" width="14" height="14" fill="#6ab8d8"/>
+          <rect x="140" y="154" width="14" height="14" fill="#3a6898"/>
+          <rect x="126" y="168" width="14" height="14" fill="#3a6898"/>
+          <rect x="140" y="168" width="14" height="14" fill="#6ab8d8"/>
+          <rect x="154" y="168" width="14" height="14" fill="#3a6898"/>
+          <rect x="140" y="182" width="14" height="14" fill="#3a6898"/>
+          <rect x="154" y="182" width="14" height="14" fill="#3a6898"/>
         </svg>
       </div>
     </div>
